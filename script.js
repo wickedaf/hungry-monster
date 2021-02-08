@@ -1,12 +1,15 @@
 document.getElementById("submit").addEventListener("click", () => {
-  let searchQuery = document.getElementById("search-form").value;
-  fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + searchQuery)
-    .then((response) => response.json())
-    .then((data) => setMeal(data)); // Return one object with meals array
+  fetchMeal();
   document.getElementById("meal-card").innerHTML = " ";
   document.getElementById("info-area").innerHTML = " ";
-  document.getElementById("meal-card").style.display = "block";
 });
+
+const fetchMeal = ()=> {
+  let searchQuery = document.getElementById("search-form").value;
+  fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + searchQuery)
+    .then(response => response.json())
+    .then(data => setMeal(data)); // Return one object with meals array
+}
 
 function setMeal(mealsObj) {
   const getMeal = mealsObj.meals;
