@@ -34,6 +34,7 @@ function setMeal(mealsObj) {
       <div class="card" style="width: 28rem;">
         <img src="${element.strMealThumb}" class="card-img-top pt-2" alt="...">
         <div class="card-body">
+          <h2>${element.strMeal}</h2>
           <p class="card-text">Ingredients - 
           <ol>
           <li>${element.strIngredient1} - ${element.strMeasure1}</li>
