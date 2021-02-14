@@ -3,6 +3,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    height: 100%;
 }
 #search-form{
     background-color: #e9ecef;
@@ -13,6 +14,15 @@ body {
 a{
     text-decoration: none;
 }
+
+a:hover, .bi-check-circle-fill{
+    color: #e74c3c !important;
+}
+
+::selection{
+    background-color: #e74c3c;
+    color: #fff;
+}
 #btnGroupAddon{
     border: none;
 }
@@ -22,13 +32,21 @@ a{
     box-shadow: none;
 }
 
-#info-area{
-    display: none;
+#meal-null{
+    display: none ;
 }
+
+/* #info-area{
+    display: none;
+} */
 
 #submit{
     background-color: #e74c3c;
     border: none;
+}
+
+.bi-heart-fill{
+    color: #e74c3c;
 }
 
 button{
